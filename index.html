@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aslanlar Hakkında Her Şey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: #fffbe7;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background-color: #1b1b1b;
+      color: #eee;
+    }
+    header {
+      background-color: #f4a261;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    #theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #e76f51;
+      margin-bottom: 10px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    audio {
+      margin-top: 10px;
+      width: 100%;
+    }
+    .popup {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #f4a261;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 999;
+      display: none;
+    }
+    .quiz-box {
+      background: #fefae0;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .quiz-box.dark {
+      background: #2a2a2a;
+      border-color: #444;
+    }
+    .quiz-box h3 {
+      margin-bottom: 10px;
+    }
+    .quiz-box label {
+      display: block;
+      margin: 8px 0;
+    }
+    .quiz-box button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #f4a261;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .quiz-result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #264653;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body class="light">
+  <header>
+    <h1>Aslanlar Hakkında Her Şey</h1>
+    <p>Ormanların kralını yakından tanıyın</p>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <div class="popup" id="popup">Hoş geldiniz! Aslanların dünyasına adım attınız.</div>
+
+  <section>
+    <h2>Genel Bilgiler</h2>
+    <p>Aslan (<em>Panthera leo</em>), kedi familyasından gelen ve genellikle "ormanların kralı" olarak bilinen yırtıcı bir memelidir. Özellikle Afrika'nın savanlarında ve bazı Asya bölgelerinde yaşar.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg" alt="Aslan">
+  </section>
+
+  <section>
+    <h2>Fiziksel Özellikler</h2>
+    <ul>
+      <li>Erkek aslanlar genellikle 150–250 kg arasındadır.</li>
+      <li>Dişiler daha küçüktür: 110–180 kg.</li>
+      <li>Erkek aslanların belirgin yeleleri vardır.</li>
+      <li>Boyları 1,7–2,5 metreye kadar ulaşabilir (kuyruk hariç).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Yaşam Alanı</h2>
+    <p>Aslanlar açık otlaklar, savanlar ve seyrek ormanlarda yaşar. Çoğunlukla Sahra Altı Afrika'da bulunurlar. Hindistan'da ise yalnızca Gir Ormanı'nda birkaç yüz Asya aslanı kalmıştır.</p>
+  </section>
+
+  <section>
+    <h2>Davranış ve Sosyal Yaşam</h2>
+    <ul>
+      <li>Aslanlar, sosyal yapıya sahip az sayıda kedi türünden biridir.</li>
+      <li>Bir grup aslana "sürü" (pride) denir.</li>
+      <li>Sürüler genellikle 5–15 bireyden oluşur.</li>
+      <li>Aktif olarak avlanma genelde dişiler tarafından yapılır.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Beslenme</h2>
+    <p>Etçildirler ve genellikle zebralar, ceylanlar, bufalolar ve bazen zürafaları avlarlar. Sürüler hâlinde avlanmalarıyla bilinirler.</p>
+  </section>
+
+  <section>
+    <h2>Üreme ve Yavrular</h2>
+    <ul>
+      <li>Gebelik süresi yaklaşık 110 gündür.</li>
+      <li>Dişi aslan genellikle 1–4 yavru doğurur.</li>
+      <li>Yavrular ilk birkaç ay anneleri tarafından korunur ve emzirilir.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tehditler ve Koruma</h2>
+    <p>Aslanlar, habitat kaybı ve insan-yaban hayatı çatışmaları nedeniyle tehdit altındadır. IUCN kırmızı listesinde "Hassas" (Vulnerable) kategorisindedir. Avcılık, yerleşim genişlemesi ve kaçakçılık başlıca tehditlerdir.</p>
+  </section>
+
+  <section>
+    <h2>İlginç Bilgiler</h2>
+    <ul>
+      <li>Bir aslanın kükremesi 8 kilometre öteden duyulabilir.</li>
+      <li>20 saate kadar uyuyabilirler.</li>
+      <li>Erkekler, genellikle başka bir erkek tarafından sürüden atılana kadar liderlik yapar.</li>
+    </ul>
+    <h3>Aslan Kükremesi</h3>
+    <audio controls>
+      <source src="https://cdn.pixabay.com/audio/2021/11/10/audio_6b13fb26ba.mp3" type="audio/mpeg">
+      Tarayıcınız ses etiketini desteklemiyor.
+    </audio>
+  </section>
+
+  <section class="quiz-box" id="quiz">
+    <h2>Mini Quiz: Aslan Bilginizi Test Edin</h2>
+    <h3>Soru: Aslanlar kaç kilometreden kükreyerek duyulabilir?</h3>
+    <label><input type="radio" name="q1" value="3"> 3 km</label>
+    <label><input type="radio" name="q1" value="5"> 5 km</label>
+    <label><input type="radio" name="q1" value="8"> 8 km</label>
+    <label><input type="radio" name="q1" value="10"> 10 km</label>
+    <button onclick="checkAnswer()">Cevabı Kontrol Et</button>
+    <div class="quiz-result" id="quiz-result"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Aslanlar Hakkında. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+    document.getElementById('theme-toggle').onclick = () => {
+      document.body.classList.toggle('dark');
+      const quizBox = document.getElementById('quiz');
+      quizBox.classList.toggle('dark');
+      const btn = document.getElementById('theme-toggle');
+      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    };
+
+    window.onload = () => {
+      const popup = document.getElementById('popup');
+      popup.style.display = 'block';
+      setTimeout(() => popup.style.display = 'none', 5000);
+    };
+
+    function checkAnswer() {
+      const answer = document.querySelector('input[name="q1"]:checked');
+      const result = document.getElementById('quiz-result');
+      if (!answer) {
+        result.textContent = "Lütfen bir cevap seçin.";
+        result.style.color = "orange";
+        return;
+      }
+      if (answer.value === "8") {
+        result.textContent = "Tebrikler! Doğru cevap.";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Yanlış cevap. Doğru cevap: 8 km.";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
